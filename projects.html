@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects — Yunessa Rodriguez</title>
+  <link rel="stylesheet" href="https://use.typekit.net/gbq3omn.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="mainNav">
+    <a href="portfolio.html" class="nav-logo">YR.</a>
+    <ul class="nav-links">
+      <li><a href="portfolio.html#about">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="portfolio.html#goals">Vision</a></li>
+      <li><a href="portfolio.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-bg">WORK</div>
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Selected Work · 2024—2025</p>
+      <h1 class="page-title">MY<br><span>PROJECTS.</span></h1>
+      <p class="page-desc">
+        A collection of everything I've made! Interactive media, digital art, motion design,
+        physical builds, and everything in between. Everything is a medium.
+      </p>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-divider">
+    <div class="marquee-track">
+      <span class="marquee-item">Interactive Media<span class="sep">◆</span></span>
+      <span class="marquee-item">Visual Art<span class="sep">◆</span></span>
+      <span class="marquee-item">Motion Design<span class="sep">◆</span></span>
+      <span class="marquee-item">Digital Fabrication<span class="sep">◆</span></span>
+      <span class="marquee-item">Sound &amp; Music<span class="sep">◆</span></span>
+      <span class="marquee-item">CTD · CU Boulder<span class="sep">◆</span></span>
+      <span class="marquee-item">Interactive Media<span class="sep">◆</span></span>
+      <span class="marquee-item">Visual Art<span class="sep">◆</span></span>
+      <span class="marquee-item">Motion Design<span class="sep">◆</span></span>
+      <span class="marquee-item">Digital Fabrication<span class="sep">◆</span></span>
+      <span class="marquee-item">Sound &amp; Music<span class="sep">◆</span></span>
+      <span class="marquee-item">CTD · CU Boulder<span class="sep">◆</span></span>
+    </div>
+  </div>
+
+  <!-- FEATURED: BRAT VISUALIZER -->
+  <section id="visualizer">
+    <div class="featured-header reveal">
+      <div>
+        <p class="section-label">Featured Project</p>
+        <h2 class="featured-title">Spidypunk<br><span>Visualizer.</span></h2>
+      </div>
+      <span class="featured-tag">Max/MSP · Jitter · Interactive</span>
+    </div>
+    <div class="featured-video-wrap reveal reveal-d1" id="vizWrap">
+      <video id="vizVideo" src="projects/brat 2026-05-06 19-48-10.mp4" autoplay loop muted playsinline></video>
+      <div class="unmute-hint" id="unmuteHint">
+        <div class="unmute-circle">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+          </svg>
+        </div>
+        <p class="unmute-text">Click to unmute</p>
+      </div>
+      <button class="sound-toggle" id="soundToggle">
+        <span class="sound-icon">🔇</span>
+        <span id="soundLabel">Muted</span>
+      </button>
+    </div>
+    <div class="featured-meta reveal reveal-d2">
+      <div class="meta-item">
+        <div class="meta-label">Tools</div>
+        <div class="meta-value">Max/MSP · Jitter</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Type</div>
+        <div class="meta-value">Audio Visualizer</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Input</div>
+        <div class="meta-value">Mic or Audio File</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section id="projects">
+    <p class="section-label reveal">All Projects</p>
+    <h2 class="section-title reveal">THE<br>WORK.</h2>
+    <div class="projects-grid">
+      <div class="project-card wide reveal" id="explainerWrap">
+        <video id="explainerVideo" src="projects/explainervideo.mp4" autoplay loop muted playsinline></video>
+        <span class="play-badge">Video</span>
+        <span class="project-num">01</span>
+        <div class="project-overlay">
+          <span class="project-cat">Motion Design</span>
+          <div class="project-name">How to Take you ADHD Meds</div>
+          <div class="project-desc">Character animation and motion design. Built in Adobe After Effects and Illustrator.</div>
+        </div>
+        <button class="sound-toggle" id="explainerToggle" onclick="event.stopPropagation()">
+          <span class="sound-icon">🔇</span>
+          <span>Muted</span>
+        </button>
+      </div>
+      <div class="project-card reveal reveal-d1">
+        <img src="projects/digital-me.JPG" alt="Digital Me" />
+        <span class="project-num">02</span>
+        <div class="project-overlay">
+          <span class="project-cat">Digital Art</span>
+          <div class="project-name">My Right</div>
+          <div class="project-desc">A self portrait depicting how women's bodies are in the hands of the law.</div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img src="projects/polaroid-portrait.jpeg" alt="Polaroid Portrait" />
+        <span class="project-num">03</span>
+        <div class="project-overlay">
+          <span class="project-cat">Graphite/Charcoal</span>
+          <div class="project-name">Memorial Portrait</div>
+          <div class="project-desc">With only a polaroid as a reference, a piece of life is returned.</div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d1">
+        <img src="projects/3d-print.JPG" alt="3D Print" />
+        <span class="project-num">04</span>
+        <div class="project-overlay">
+          <span class="project-cat">Digital Fabrication</span>
+          <div class="project-name">Topography Model</div>
+          <div class="project-desc">Built in Rhino3D: A physical model representing the decline in available water at Gross Reservoir.</div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d2">
+        <img src="projects/Rodriguez_project2_render4.jpg.jpg" alt="3D Render" />
+        <span class="project-num">05</span>
+        <div class="project-overlay">
+          <span class="project-cat">3D Design</span>
+          <div class="project-name">3D Render</div>
+          <div class="project-desc">Architectural render exploring space and light.</div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img src="projects/floating.jpg" alt="Between" />
+        <span class="project-num">06</span>
+        <div class="project-overlay">
+          <span class="project-cat">Digital Art</span>
+          <div class="project-name">"Between"</div>
+          <div class="project-desc">Exploring weightlessness and suspension in digital space through photography and editing.</div>
+        </div>
+      </div>
+      <div class="project-card wide reveal reveal-d1">
+        <img src="projects/Snowflakes.jpg" alt="Snowflakes" />
+        <span class="project-num">07</span>
+        <div class="project-overlay">
+          <span class="project-cat">Generative / Pattern</span>
+          <div class="project-name">"Wish You Were Here</div>
+          <div class="project-desc">Finding beauty in geometric structure created by nature itself.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVERYTHING IS A MEDIUM -->
+  <section id="medium">
+    <div class="medium-intro">
+      <div>
+        <p class="section-label reveal">Series</p>
+        <h2 class="section-title reveal" style="margin-bottom:0;">Everything<br>Is A<br>Medium.</h2>
+      </div>
+      <p class="medium-desc reveal reveal-d1">
+        Art doesn't care what tool you use. I've made work on <strong>chalkboards, whiteboards,
+        bleached denim, skin, acrylic, paper, and even snow</strong>. Every medium impacts meaning,
+         and it is never restricted to paper and pen.
+      </p>
+    </div>
+    <div class="medium-grid">
+      <div class="medium-item reveal reveal-d2" data-src="Everything-is-a-medium/tattoo-design.JPG" data-label="Tattoo Design">
+        <img src="Everything-is-a-medium/tattoo-design.JPG" alt="Tattoo Design" /><div class="medium-label">Tattoo Design</div>
+      </div>
+      <div class="medium-item reveal" data-src="Everything-is-a-medium/tattoo.jpeg" data-label="Tattoo">
+        <img src="Everything-is-a-medium/tattoo.jpeg" alt="Tattoo" /><div class="medium-label">Tattoo</div>
+      </div>
+      <div class="medium-item wide2 reveal" data-src="Everything-is-a-medium/acrylic.jpeg" data-label="Acrylic Painting">
+        <img src="Everything-is-a-medium/acrylic.jpeg" alt="Everything, all at Once" /><div class="medium-label">Everything, all at Once</div>
+      </div>
+      <div class="medium-item reveal reveal-d1" data-src="Everything-is-a-medium/mixed-media.jpeg" data-label="Mixed Media">
+        <img src="Everything-is-a-medium/mixed-media.jpeg" alt="Mixed Media" /><div class="medium-label">Mixed Media</div>
+      </div>
+      <div class="medium-item reveal reveal-d2" data-src="Everything-is-a-medium/pen-art.jpg" data-label="Pen Art">
+        <img src="Everything-is-a-medium/pen-art.jpg" alt="Pen Art" /><div class="medium-label">Pen Art</div>
+      </div>
+      <div class="medium-item wide2 reveal" data-src="Everything-is-a-medium/bleached-pants.jpeg" data-label="Bleached Denim">
+        <img src="Everything-is-a-medium/bleached-pants.jpeg" alt="Bleached Pants" /><div class="medium-label">Clockwork Dragon Bleached Denim</div>
+      </div>
+      <div class="medium-item reveal" data-src="Everything-is-a-medium/chalkboard.JPG" data-label="Chalkboard">
+        <img src="Everything-is-a-medium/chalkboard.JPG" alt="Chalkboard" /><div class="medium-label">Advertisement Piece</div>
+      </div>
+      <div class="medium-item reveal reveal-d1" data-src="Everything-is-a-medium/whiteboard-portrait.JPG" data-label="Whiteboard Portrait">
+        <img src="Everything-is-a-medium/whiteboard-portrait.JPG" alt="Whiteboard" /><div class="medium-label">Whiteboard Portrait</div>
+      </div>
+      <div class="medium-item reveal reveal-d2" data-src="Everything-is-a-medium/funny-whiteboard.jpeg" data-label="Whiteboard">
+        <img src="Everything-is-a-medium/funny-whiteboard.jpeg" alt="Funny Whiteboard" /><div class="medium-label">Whiteboard Sketch</div>
+      </div>
+      <div class="medium-item reveal" data-src="Everything-is-a-medium/sidewalk-chalk.jpg" data-label="Sidewalk Chalk">
+        <img src="Everything-is-a-medium/sidewalk-chalk.jpg" alt="Sidewalk Chalk" /><div class="medium-label">Sidewalk Chalk</div>
+      </div>
+      <div class="medium-item wide3 reveal reveal-d2" data-src="Everything-is-a-medium/intimacy.JPG" data-label="Intimacy">
+        <img src="Everything-is-a-medium/intimacy.JPG" alt="Intimacy" /><div class="medium-label">Intimacy</div>
+      </div>
+      <div class="medium-item wide2 reveal" data-src="Everything-is-a-medium/sister.jpg" data-label="Sister">
+        <img src="Everything-is-a-medium/sister.jpg" alt="Sister" /><div class="medium-label">Sister</div>
+      </div>
+      <div class="medium-item reveal reveal-d1" data-src="Everything-is-a-medium/axolotl.JPG" data-label="Axolotl">
+        <img src="Everything-is-a-medium/axolotl.JPG" alt="Axolotl" /><div class="medium-label">Light up Axolotl</div>
+      </div>
+      <div class="medium-item reveal reveal-d1" data-src="Everything-is-a-medium/sno.JPG" data-label="Snow Art">
+        <img src="Everything-is-a-medium/sno.JPG" alt="Snow" /><div class="medium-label">Snowman!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DRAWING PLANS -->
+  <section id="drawing-plans">
+    <div class="drawing-intro">
+      <div>
+        <p class="section-label reveal">Favorite Piece</p>
+        <h2 class="section-title reveal" style="margin-bottom:0;">Drawing<br>Plans.</h2>
+      </div>
+      <div class="drawing-desc reveal reveal-d1">
+        <p>Architectural drawing plans: One of my favorite projects
+        The intention behind every line is what makes this piece feel alive.</p>
+        <br>
+        <a href="projects/Rodriguez_project1_drawinfplans.jpg.pdf" download class="btn btn-outline" style="margin-top:8px;">
+          <span>↓ Download PDF</span>
+        </a>
+      </div>
+    </div>
+    <div class="drawing-embed reveal reveal-d2">
+      <iframe src="projects/Rodriguez_project1_drawinfplans.jpg.pdf"></iframe>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-close" id="lightboxClose">✕</div>
+    <img id="lightboxImg" class="lightbox-media" src="" alt="" style="display:none;" />
+    <video id="lightboxVid" class="lightbox-video" style="display:none;" playsinline controls></video>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <button class="lightbox-sound" id="lightboxSound">🔇 Muted</button>
+  </div>
+
+  <footer>
+    <span>Yunessa Rodriguez ©</span>
+    <span><a href="portfolio.html" style="color:var(--acid);text-decoration:none;">← Back to Home</a></span>
+    <span>CTD · CU Boulder</span>
+  </footer>
+
+  <script>
+    // ── Cursor ──
+    const dot=document.getElementById('cursorDot'), ring=document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+    (function animRing(){rx+=(mx-rx)*0.11;ry+=(my-ry)*0.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
+    document.querySelectorAll('a,button,.project-card,.medium-item,.interest-card,.lightbox-close').forEach(el=>{
+      el.addEventListener('mouseenter',()=>ring.classList.add('hover'));
+      el.addEventListener('mouseleave',()=>ring.classList.remove('hover'));
+    });
+
+    // ── Nav ──
+    const nav=document.getElementById('mainNav');
+    window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
+
+    // ── Scroll reveal ──
+    const obs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+    },{threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    // ── Brat visualizer sound toggle ──
+    const vizVideo=document.getElementById('vizVideo');
+    const soundToggle=document.getElementById('soundToggle');
+    const soundLabel=document.getElementById('soundLabel');
+    const soundIcon=soundToggle.querySelector('.sound-icon');
+    const unmuteHint=document.getElementById('unmuteHint');
+    function setVizMuted(m){
+      vizVideo.muted=m;
+      soundIcon.textContent=m?'🔇':'🔊';
+      soundLabel.textContent=m?'Muted':'Sound On';
+      if(!m)unmuteHint.classList.add('hidden');
+    }
+    soundToggle.addEventListener('click',()=>setVizMuted(!vizVideo.muted));
+    document.getElementById('vizWrap').addEventListener('click',e=>{
+      if(e.target!==soundToggle&&!soundToggle.contains(e.target))setVizMuted(!vizVideo.muted);
+    });
+    setTimeout(()=>unmuteHint.classList.add('hidden'),4000);
+
+    // ── Explainer video sound toggle ──
+    const explainerVideo=document.getElementById('explainerVideo');
+    const explainerToggle=document.getElementById('explainerToggle');
+    if(explainerVideo&&explainerToggle){
+      explainerToggle.addEventListener('click',()=>{
+        explainerVideo.muted=!explainerVideo.muted;
+        explainerToggle.textContent=explainerVideo.muted?'🔇 Muted':'🔊 Sound On';
+      });
+      document.getElementById('explainerWrap').addEventListener('click',e=>{
+        if(e.target!==explainerToggle&&!explainerToggle.contains(e.target)){
+          explainerVideo.muted=!explainerVideo.muted;
+          explainerToggle.textContent=explainerVideo.muted?'🔇 Muted':'🔊 Sound On';
+        }
+      });
+    }
+
+    // ── Universal lightbox ──
+    const lightbox=document.getElementById('lightbox');
+    const lightboxImg=document.getElementById('lightboxImg');
+    const lightboxVid=document.getElementById('lightboxVid');
+    const lightboxCaption=document.getElementById('lightboxCaption');
+    const lightboxSound=document.getElementById('lightboxSound');
+
+    function openLightboxImg(src, label){
+      lightboxImg.src=src; lightboxImg.style.display='block';
+      lightboxVid.style.display='none'; lightboxVid.pause();
+      lightboxSound.classList.remove('visible');
+      lightboxCaption.textContent=label||'';
+      lightbox.classList.add('open');
+      document.body.style.overflow='hidden';
+    }
+
+    function openLightboxVideo(src, label){
+      lightboxVid.src=src; lightboxVid.muted=true;
+      lightboxVid.style.display='block'; lightboxVid.play();
+      lightboxImg.style.display='none';
+      lightboxSound.classList.add('visible');
+      lightboxSound.textContent='🔇 Muted';
+      lightboxCaption.textContent=label||'';
+      lightbox.classList.add('open');
+      document.body.style.overflow='hidden';
+    }
+
+    function closeLightbox(){
+      lightbox.classList.remove('open');
+      lightboxVid.pause(); lightboxVid.src='';
+      lightboxImg.src='';
+      document.body.style.overflow='';
+    }
+
+    // lightbox sound toggle
+    lightboxSound.addEventListener('click',e=>{
+      e.stopPropagation();
+      lightboxVid.muted=!lightboxVid.muted;
+      lightboxSound.textContent=lightboxVid.muted?'🔇 Muted':'🔊 Sound On';
+    });
+
+    // medium items (images)
+    document.querySelectorAll('.medium-item[data-src]').forEach(item=>{
+      item.addEventListener('click',()=>openLightboxImg(item.dataset.src, item.dataset.label));
+    });
+
+    // project cards
+    document.querySelectorAll('.project-card').forEach(card=>{
+      card.addEventListener('click',e=>{
+        if(e.target.closest('button')) return;
+        const vid=card.querySelector('video');
+        const img=card.querySelector('img');
+        const label=card.querySelector('.project-name')?.textContent||'';
+        if(vid) openLightboxVideo(vid.src||vid.currentSrc, label);
+        else if(img) openLightboxImg(img.src, label);
+      });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click',closeLightbox);
+    lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+  </script>
+</body>
+</html>
