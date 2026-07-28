@@ -80,6 +80,20 @@ nav.scrolled {
 .nav-links a:hover::after,
 .nav-links a.active::after { width: 100%; }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column; justify-content: center; gap: 5px;
+  width: 30px; height: 24px; background: none; border: none; cursor: pointer;
+  z-index: 250; position: relative; padding: 0;
+}
+.nav-toggle span {
+  display: block; width: 100%; height: 2px; background: var(--acid);
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+nav.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ══════════════════════════════
    SHARED SECTION ELEMENTS
 ══════════════════════════════ */
@@ -236,7 +250,7 @@ footer {
 .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--acid); display: block; }
 .hero-name {
   font-family: kallisto, sans-serif;
-  font-size: clamp(80px, 12vw, 156px);
+  font-size: clamp(42px, 12vw, 156px);
   font-weight: 900; line-height: 0.88; text-transform: uppercase;
   color: var(--white); opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
   letter-spacing: -0.02em;
@@ -409,7 +423,7 @@ footer {
 #contact { border-top: 1px solid rgba(255,255,255,0.06); padding: 120px 56px; text-align: center; }
 .contact-big {
   font-family: kallisto, sans-serif;
-  font-size: clamp(56px, 10vw, 140px); font-weight: 900;
+  font-size: clamp(40px, 10vw, 140px); font-weight: 900;
   text-transform: uppercase; line-height: 0.88; margin-bottom: 72px; letter-spacing: -0.02em;
 }
 .contact-big span { color: var(--acid); }
@@ -456,7 +470,7 @@ footer {
 .page-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--acid); display: block; }
 .page-title {
   font-family: kallisto, sans-serif;
-  font-size: clamp(56px, 9vw, 120px); font-weight: 900;
+  font-size: clamp(38px, 9vw, 120px); font-weight: 900;
   line-height: 0.9; text-transform: uppercase; letter-spacing: -0.02em;
   opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards;
 }
@@ -617,6 +631,19 @@ footer {
 ══════════════════════════════ */
 @media (max-width: 900px) {
   nav, nav.scrolled { padding: 20px 28px; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: fixed; inset: 0; flex-direction: column;
+    align-items: flex-start; justify-content: center; gap: 30px;
+    padding: 0 40px; margin: 0;
+    background: rgba(13,13,13,0.98); backdrop-filter: blur(16px);
+    transform: translateX(100%); transition: transform 0.4s ease;
+  }
+  nav.nav-open .nav-links { transform: translateX(0); }
+  .nav-links a {
+    font-family: kallisto, sans-serif; font-size: 26px; font-weight: 900;
+    letter-spacing: 0.05em;
+  }
   #about { grid-template-columns: 1fr; gap: 48px; padding: 80px 28px; }
   .interests-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
   .interest-card.wide { grid-column: span 2; height: 280px; }
@@ -625,7 +652,9 @@ footer {
   #goals, #contact { padding: 80px 28px; }
   .hero-content { padding: 0 28px 100px; }
   .page-header { padding: 120px 28px 60px; }
-  #visualizer, #projects, #medium, #drawing-plans { padding: 80px 28px; }
+  #visualizer, #projects, #medium, #drawing-plans,
+  #tymb-featured, #tymb-process, #circuits { padding: 80px 28px; }
+  .drawing-embed iframe { height: 480px; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
   .project-card.wide { grid-column: span 2; }
   .medium-grid { grid-template-columns: repeat(2, 1fr); }

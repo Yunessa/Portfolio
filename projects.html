@@ -14,6 +14,10 @@
 
   <nav id="mainNav">
     <a href="portfolio.html" class="nav-logo">YR.</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
     <ul class="nav-links">
       <li><a href="portfolio.html#about">About</a></li>
       <li><a href="projects.html" class="active">Projects</a></li>
@@ -63,7 +67,7 @@
       <span class="featured-tag">Max/MSP · Jitter · Interactive</span>
     </div>
     <div class="featured-video-wrap reveal reveal-d1" id="vizWrap">
-      <video id="vizVideo" src="projects/brat 2026-05-06 19-48-10.mp4" autoplay loop muted playsinline></video>
+      <video id="vizVideo" src="brat 2026-05-06 19-48-10.mp4" autoplay loop muted playsinline></video>
       <div class="unmute-hint" id="unmuteHint">
         <div class="unmute-circle">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +103,7 @@
     <h2 class="section-title reveal">THE<br>WORK.</h2>
     <div class="projects-grid">
       <div class="project-card wide reveal" id="explainerWrap">
-        <video id="explainerVideo" src="projects/explainervideo.mp4" autoplay loop muted playsinline></video>
+        <video id="explainerVideo" src="explainervideo.mp4" autoplay loop muted playsinline></video>
         <span class="play-badge">Video</span>
         <span class="project-num">01</span>
         <div class="project-overlay">
@@ -278,6 +282,11 @@
     // ── Nav ──
     const nav=document.getElementById('mainNav');
     window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
+    const navToggle=document.getElementById('navToggle');
+    if(navToggle){
+      navToggle.addEventListener('click',()=>nav.classList.toggle('nav-open'));
+      document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('nav-open')));
+    }
 
     // ── Scroll reveal ──
     const obs=new IntersectionObserver(entries=>{
