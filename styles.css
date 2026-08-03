@@ -629,6 +629,9 @@ footer {
 /* ══════════════════════════════
    OBJECT PAGE — DOC SECTIONS
 ══════════════════════════════ */
+#tymb-featured, #tymb-process, #circuits {
+  padding: 100px 56px; border-top: 1px solid rgba(255,255,255,0.06);
+}
 .doc-section { padding: 100px 56px; border-top: 1px solid rgba(255,255,255,0.06); }
 .doc-copy { max-width: 640px; }
 .doc-copy p { font-size: 12px; line-height: 2; color: rgba(255,255,255,0.68); margin-bottom: 20px; }
@@ -636,6 +639,7 @@ footer {
 .doc-copy strong { color: var(--white); }
 .doc-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; align-items: start; margin-top: 48px; }
 .doc-grid .doc-copy { max-width: none; }
+.projects-grid.grid-2col { grid-template-columns: repeat(2, 1fr); }
 
 .spec-list { list-style: none; border-top: 1px solid rgba(255,255,255,0.08); }
 .spec-list li {
