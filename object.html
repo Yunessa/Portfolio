@@ -58,15 +58,67 @@
     </div>
   </div>
 
+  <!-- BASICS -->
+  <section id="basics" class="doc-section">
+    <p class="section-label reveal">Where It Started</p>
+    <h2 class="section-title reveal">ANALOG<br>VS. DIGITAL.</h2>
+    <div class="doc-copy reveal reveal-d1">
+      <p>Before we built anything, we started with the basics: analog vs. digital. Analog signals are continuous, like a dial turning or a light sensor slowly changing value. Digital is either on or off, HIGH or LOW, nothing in between.</p>
+      <p>Sounds obvious, but it's the foundation for everything below it. Every object here is either reading a continuous value (like pressure) or reacting to a single digital event (like a button press).</p>
+    </div>
+  </section>
+
+  <!-- ENCLOSURES -->
+  <section id="enclosures" class="doc-section">
+    <p class="section-label reveal">Fabrication</p>
+    <h2 class="section-title reveal">ENCLOSURES.</h2>
+    <div class="doc-copy reveal reveal-d1">
+      <p>My first real enclosure was a basic light and button circuit built into a Labubu-shaped case. I modeled it from scratch in Rhino3D, printed it, and finished it by hand — hot glue gun to clean up the seams and hold the internal wiring down, and a magnet embedded in the case so it snaps shut instead of using a clip or screws.</p>
+      <p>Small object, but this is basically the workflow I stuck with for the rest of the semester: model it, print it, wire it, then finish it by hand until it actually looks done.</p>
+    </div>
+    <div class="projects-grid" style="margin-top:48px;">
+      <div class="project-card reveal">
+        <img src="circutsshit/button.JPG" alt="Button Input Circuit" />
+        <span class="project-num">01</span>
+        <div class="project-overlay">
+          <span class="project-cat">Circuit</span>
+          <div class="project-name">Light + Button Circuit</div>
+          <div class="project-desc">The circuit before it had a home. Just a button triggering a light.</div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d1">
+        <img src="circutsshit/labubu-model.png" alt="Labubu 3D Model" />
+        <span class="project-num">02</span>
+        <div class="project-overlay">
+          <span class="project-cat">3D Design</span>
+          <div class="project-name">Labubu Model</div>
+          <div class="project-desc">Modeled from scratch in Rhino3D to fit the circuit and close with a magnet.</div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img src="circutsshit/Final-Labubu.JPG" alt="Printed Labubu Enclosure" />
+        <span class="project-num">03</span>
+        <div class="project-overlay">
+          <span class="project-cat">3D Print / Assembly</span>
+          <div class="project-name">Finished Enclosure</div>
+          <div class="project-desc">Printed, wired, and cleaned up with hot glue around the internals.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURED: TYMB PRESSURE SENSOR -->
   <section id="tymb-featured">
     <div class="featured-header reveal">
       <div>
-        <p class="section-label">Featured Object</p>
-        <h2 class="featured-title">TYMB<br><span>Pressure Sensor.</span></h2>
+        <p class="section-label">IDC 1</p>
+        <h2 class="featured-title">TYMB<br><span>Take Your Meds.</span></h2>
       </div>
       <span class="featured-tag">Arduino · Sensors · 3D design</span>
     </div>
+    <p class="doc-copy reveal reveal-d1" style="margin: -24px 0 32px;">
+      TYMB stands for <strong>Take Your Meds, Bitch</strong>. I have ADHD, so remembering to take my meds is genuinely hard — before this, I'd get anxious about forgetting and end up counting all my pills by hand almost every day just to check. TYMB does that counting for me now.
+    </p>
     <div class="featured-video-wrap reveal reveal-d1" id="tymbWrap">
       <video id="tymbVideo" src="circutsshit/TYMB-pressure-sensor.MOV" autoplay loop muted playsinline></video>
       <div class="unmute-hint" id="tymbUnmuteHint">
@@ -85,7 +137,7 @@
     <div class="featured-meta reveal reveal-d2">
       <div class="meta-item">
         <div class="meta-label">Tools</div>
-        <div class="meta-value">Arduino · Force Sensor</div>
+        <div class="meta-value">Arduino · Force Sensor · RTC · LCD</div>
       </div>
       <div class="meta-item">
         <div class="meta-label">Type</div>
@@ -94,6 +146,35 @@
       <div class="meta-item">
         <div class="meta-label">Trigger</div>
         <div class="meta-value">Pressure Input</div>
+      </div>
+    </div>
+
+    <div class="doc-grid">
+      <div class="doc-copy reveal">
+        <p>There's a pressure sensor built into a finger slot on the case. Press it to pull out a dose and it logs that against a real-time clock. An LCD screen shows what's been taken, what's next, and how many pills you've got left.</p>
+        <p>The <strong>pill tray</strong> and the <strong>lid</strong> both come off separately, so refilling doesn't mean taking the whole thing apart. There are seven slots total, one for each day of the week.</p>
+        <div class="future-box">
+          <span class="future-label">Future Work</span>
+          I want to switch the navigation over to a physical button, and pair the pressure sensor with stepper motors so the case can actually dispense a pill on its own instead of just logging that one was taken.
+        </div>
+      </div>
+      <div class="state-list reveal reveal-d1">
+        <div class="state-row">
+          <span class="state-dot blue"></span>
+          <div class="state-copy"><strong>Blue — Logged</strong><span>A dose was tracked and the day is on schedule.</span></div>
+        </div>
+        <div class="state-row">
+          <span class="state-dot yellow"></span>
+          <div class="state-copy"><strong>Yellow — Almost Time</strong><span>The next dose window is coming up.</span></div>
+        </div>
+        <div class="state-row">
+          <span class="state-dot red"></span>
+          <div class="state-copy"><strong>Red + Buzzer — Take Your Meds</strong><span>The window is here and nothing's been logged yet.</span></div>
+        </div>
+        <div class="state-row">
+          <span class="state-dot red"></span>
+          <div class="state-copy"><strong>Solid Red — Refill</strong><span>The case is running low, and the screen switches to a standing refill reminder until it's restocked.</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -145,16 +226,20 @@
         <div class="project-overlay">
           <span class="project-cat">Finished Build</span>
           <div class="project-name">Final TYMB</div>
-          <div class="project-desc">The finished object. Originally, this piece was going to work based on the force pressure sensor detecting the opening and closing of the lid, but later redesigned.</div>
+          <div class="project-desc">The finished object. I originally wanted the pressure sensor to trigger off the lid opening and closing, but switched to the finger slot — it ended up being a much cleaner trigger.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CIRCUITS & EXPERIMENTS -->
+  <!-- MOTOR BUFFET -->
   <section id="circuits">
     <p class="section-label reveal">Prototypes &amp; Experiments</p>
-    <h2 class="section-title reveal">CIRCUITS<br>&amp; PARTS.</h2>
+    <h2 class="section-title reveal">MOTOR<br>BUFFET.</h2>
+    <div class="doc-copy reveal reveal-d1" style="margin-bottom:48px;">
+      <p>For this one I built all three required sensor circuits on a breadboard, each one running off a battery instead of the bench power supply.</p>
+      <p>I want to reuse this same logic with stepper motors for TYMB's auto-dispenser eventually, and maybe for an automatic joint roller down the line too.</p>
+    </div>
     <div class="projects-grid">
       <div class="project-card reveal">
         <img src="circutsshit/DC-motor.JPG" alt="DC Motor" />
@@ -162,7 +247,7 @@
         <div class="project-overlay">
           <span class="project-cat">Electronics</span>
           <div class="project-name">DC Motor</div>
-          <div class="project-desc">Basic DC motor testing.</div>
+          <div class="project-desc">Basic DC motor test, just continuous rotation.</div>
         </div>
       </div>
       <div class="project-card reveal reveal-d1">
@@ -171,7 +256,7 @@
         <div class="project-overlay">
           <span class="project-cat">Electronics</span>
           <div class="project-name">Stepper Motor</div>
-          <div class="project-desc">Precision movement testing with a stepper motor, hopefully later integrated into TYMB.</div>
+          <div class="project-desc">Step-by-step movement — this is what I want to build TYMB's dispenser around.</div>
         </div>
       </div>
       <div class="project-card reveal">
@@ -180,48 +265,164 @@
         <div class="project-overlay">
           <span class="project-cat">Electronics</span>
           <div class="project-name">Knob Control</div>
-          <div class="project-desc">Motor control through a manual knob interface.</div>
+          <div class="project-desc">Motor speed controlled directly with a knob.</div>
         </div>
       </div>
-      <div class="project-card reveal reveal-d1">
-        <img src="circutsshit/button.JPG" alt="Button Input" />
-        <span class="project-num">04</span>
-        <div class="project-overlay">
-          <span class="project-cat">Input</span>
-          <div class="project-name">Button Input</div>
-          <div class="project-desc">Wow, look where we started!</div>
-        </div>
-      </div>
-      <div class="project-card wide reveal" id="sweepWrap">
+      <div class="project-card wide reveal reveal-d1" id="sweepWrap">
         <video id="sweepVideo" src="circutsshit/sweep-motor.MOV" autoplay loop muted playsinline></video>
         <span class="play-badge">Video</span>
-        <span class="project-num">05</span>
+        <span class="project-num">04</span>
         <div class="project-overlay">
           <span class="project-cat">Motion Test</span>
           <div class="project-name">Sweep Motor</div>
-          <div class="project-desc">A servo sweeping back and forth — motion testing in action.</div>
+          <div class="project-desc">A servo sweeping back and forth, testing the motion before mounting it to anything.</div>
         </div>
         <button class="sound-toggle" id="sweepToggle" onclick="event.stopPropagation()">
           <span class="sound-icon">🔇</span>
           <span>Muted</span>
         </button>
       </div>
-      <div class="project-card reveal reveal-d1">
-        <img src="circutsshit/labubu-model.png" alt="Labubu 3D Model" />
-        <span class="project-num">06</span>
+    </div>
+  </section>
+
+  <!-- IDC 2: MIRROROS -->
+  <section id="mirroros" class="doc-section">
+    <p class="section-label reveal">IDC 2</p>
+    <h2 class="section-title reveal">MIRROROS.</h2>
+    <div class="doc-copy reveal reveal-d1">
+      <p>MirrorOS is a smart mirror app, plus a physical remote that controls it so I never have to touch my phone. I wanted the interface to feel like Apple software — clean, glassy panels, no clutter. I built it in Electron and used Claude to help write a lot of the code.</p>
+      <p>The mirror itself is a discontinued Lululemon smart mirror, which already came with speakers, a camera, and a mic built in, so I figured I'd build on top of that instead of starting from a blank panel. There's an ultrasonic sensor behind the glass that checks if someone's actually standing in front of it, and dims, lights up, or turns the display off based on that.</p>
+    </div>
+
+    <div class="doc-grid">
+      <div class="doc-copy reveal">
+        <p>I built a remote to control it instead of relying on touch. It's got a joystick — every direction moves you through the app, pressing down selects — plus back, home, and voice buttons. There's an ESP32 inside, which is what gives it Bluetooth and Wi-Fi. It talks to the mirror over Wi-Fi, but I set it up to run off a phone hotspot too, so it's not locked to one router.</p>
+      </div>
+      <ul class="spec-list reveal reveal-d1">
+        <li><strong>Voice</strong>Hold it down and it triggers an AI agent (powered by Groq) that can navigate the app for you — "mirror, open Spotify," "mirror, open Pinterest."</li>
+        <li><strong>Joystick</strong>Moves through every page. Press down to select.</li>
+        <li><strong>Back / Home</strong>Gets you out of whatever page you're on.</li>
+        <li><strong>ESP32</strong>Bluetooth and Wi-Fi, can run off a phone hotspot to stay portable.</li>
+      </ul>
+    </div>
+
+    <p class="section-label reveal" style="margin-top:80px;">Inside The App</p>
+    <h2 class="section-title reveal" style="margin-bottom:32px;">WHAT IT<br>DOES.</h2>
+    <div class="doc-copy reveal reveal-d1" style="margin-bottom:48px;">
+      <p><strong>Getting ready</strong> pulls outfit ideas from Pinterest. <strong>Workout</strong> is just a timer. <strong>Music</strong> connects to YouTube Music and Spotify. And <strong>doomscroll mode</strong> — because apparently that had to exist too — puts TikTok, Instagram, Reddit, and YouTube Shorts on the mirror instead of your phone.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <img src="circutsshit/mirroros-home.png" alt="MirrorOS Home Screen" />
+        <span class="project-num">01</span>
         <div class="project-overlay">
-          <span class="project-cat">3D Design</span>
-          <div class="project-name">Labubu Model</div>
-          <div class="project-desc">3D model in Rhino3D</div>
+          <span class="project-cat">Home</span>
+          <div class="project-name">Home</div>
+          <div class="project-desc">Greeting, weather, and quick links into everything else.</div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d1">
+        <img src="circutsshit/mirroros-ready.png" alt="MirrorOS Get Ready Screen" />
+        <span class="project-num">02</span>
+        <div class="project-overlay">
+          <span class="project-cat">Get Ready</span>
+          <div class="project-name">Get Ready</div>
+          <div class="project-desc">Weather, what's next on the calendar, a checklist, and an AI prompt to help plan the outfit.</div>
         </div>
       </div>
       <div class="project-card reveal">
-        <img src="circutsshit/Final-Labubu.JPG" alt="Printed Labubu" />
+        <img src="circutsshit/mirroros-music.png" alt="MirrorOS Music Screen" />
+        <span class="project-num">03</span>
+        <div class="project-overlay">
+          <span class="project-cat">Music</span>
+          <div class="project-name">Music</div>
+          <div class="project-desc">Playback controls on the mirror itself, or hand it off to Spotify or YouTube Music.</div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d1">
+        <img src="circutsshit/mirroros-outfit.png" alt="MirrorOS Outfit Screen" />
+        <span class="project-num">04</span>
+        <div class="project-overlay">
+          <span class="project-cat">Outfit</span>
+          <div class="project-name">Outfit</div>
+          <div class="project-desc">Pulls outfit inspo straight from Pinterest.</div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img src="circutsshit/mirroros-workout.png" alt="MirrorOS Workout Screen" />
+        <span class="project-num">05</span>
+        <div class="project-overlay">
+          <span class="project-cat">Workout</span>
+          <div class="project-name">Workout</div>
+          <div class="project-desc">Just a guided timer, runs from the remote.</div>
+        </div>
+      </div>
+      <div class="project-card wide reveal reveal-d1">
+        <img src="circutsshit/mirroros-doomscroll.png" alt="MirrorOS Doomscroll Screen" />
+        <span class="project-num">06</span>
+        <div class="project-overlay">
+          <span class="project-cat">Doomscroll</span>
+          <div class="project-name">Doomscroll Mode</div>
+          <div class="project-desc">TikTok, Reddit, Instagram, YouTube Shorts. Yes, on the mirror.</div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img src="circutsshit/mirroros-assistant.png" alt="MirrorOS AI Assistant Screen" />
         <span class="project-num">07</span>
         <div class="project-overlay">
-          <span class="project-cat">3D Print</span>
-          <div class="project-name">Printed Labubu</div>
-          <div class="project-desc">The finished 3D print, surrounding a basic button and light circut</div>
+          <span class="project-cat">AI Assistant</span>
+          <div class="project-name">Hey Mirror</div>
+          <div class="project-desc">Same voice agent as the remote, but you can type to it here too.</div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d1">
+        <img src="circutsshit/mirroros-settings.png" alt="MirrorOS Settings Screen" />
+        <span class="project-num">08</span>
+        <div class="project-overlay">
+          <span class="project-cat">Settings</span>
+          <div class="project-name">Settings</div>
+          <div class="project-desc">Brightness, volume, and connection status for everything else.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label reveal" style="margin-top:80px;">The Remote</p>
+    <h2 class="section-title reveal" style="margin-bottom:32px;">BUILT<br>BY HAND.</h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <img src="circutsshit/IDC2-joystick-preassembled.JPG" alt="MirrorOS Remote Preassembled" />
+        <span class="project-num">01</span>
+        <div class="project-overlay">
+          <span class="project-cat">Assembly</span>
+          <div class="project-name">Remote — Preassembled</div>
+          <div class="project-desc">Joystick and buttons wired up before I closed the case.</div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d1">
+        <img src="circutsshit/IDC2-front-remote.jpg" alt="MirrorOS Remote Front" />
+        <span class="project-num">02</span>
+        <div class="project-overlay">
+          <span class="project-cat">Hardware</span>
+          <div class="project-name">Remote — Front</div>
+          <div class="project-desc">Joystick in the center, back/home/voice buttons around it.</div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img src="circutsshit/IDC2-top-remote.jpg" alt="MirrorOS Remote Top" />
+        <span class="project-num">03</span>
+        <div class="project-overlay">
+          <span class="project-cat">Hardware</span>
+          <div class="project-name">Remote — Top</div>
+          <div class="project-desc">The ESP32 inside, this is what gives the remote Bluetooth and Wi-Fi.</div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d1">
+        <img src="circutsshit/IDC2-Ultrasonic-Sensor.JPG" alt="MirrorOS Ultrasonic Presence Sensor" />
+        <span class="project-num">04</span>
+        <div class="project-overlay">
+          <span class="project-cat">Sensors</span>
+          <div class="project-name">Presence Sensor</div>
+          <div class="project-desc">Sits behind the glass and reads distance to dim, light, or sleep the mirror.</div>
         </div>
       </div>
     </div>

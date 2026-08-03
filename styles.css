@@ -627,6 +627,48 @@ footer {
 .drawing-embed iframe { display: block; border: none; background: #111; width: 100%; height: 880px; }
 
 /* ══════════════════════════════
+   OBJECT PAGE — DOC SECTIONS
+══════════════════════════════ */
+.doc-section { padding: 100px 56px; border-top: 1px solid rgba(255,255,255,0.06); }
+.doc-copy { max-width: 640px; }
+.doc-copy p { font-size: 12px; line-height: 2; color: rgba(255,255,255,0.68); margin-bottom: 20px; }
+.doc-copy p:last-child { margin-bottom: 0; }
+.doc-copy strong { color: var(--white); }
+.doc-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; align-items: start; margin-top: 48px; }
+.doc-grid .doc-copy { max-width: none; }
+
+.spec-list { list-style: none; border-top: 1px solid rgba(255,255,255,0.08); }
+.spec-list li {
+  padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 12px; line-height: 1.8; color: rgba(255,255,255,0.65);
+  display: flex; gap: 12px;
+}
+.spec-list li::before { content: '◆'; color: var(--acid); font-size: 8px; flex: none; margin-top: 5px; }
+.spec-list li strong { color: var(--white); display: block; font-family: kallisto, sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px; }
+
+.state-list { border-top: 1px solid rgba(255,255,255,0.08); }
+.state-row {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.state-dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 5px; flex: none; box-shadow: 0 0 10px currentColor; }
+.state-dot.blue { background: var(--blue); color: var(--blue); }
+.state-dot.yellow { background: #F0C93A; color: #F0C93A; }
+.state-dot.red { background: #E6493A; color: #E6493A; }
+.state-copy strong { display: block; font-family: kallisto, sans-serif; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 4px; }
+.state-copy span { font-size: 11.5px; line-height: 1.7; color: rgba(255,255,255,0.6); }
+
+.future-box {
+  margin-top: 32px; padding: 22px 28px;
+  border: 1px solid rgba(186,221,30,0.25); background: rgba(186,221,30,0.03);
+  font-size: 12px; line-height: 1.85; color: rgba(255,255,255,0.65);
+}
+.future-box .future-label {
+  display: block; font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--acid); margin-bottom: 10px;
+}
+
+/* ══════════════════════════════
    RESPONSIVE
 ══════════════════════════════ */
 @media (max-width: 900px) {
@@ -654,6 +696,8 @@ footer {
   .page-header { padding: 120px 28px 60px; }
   #visualizer, #projects, #medium, #drawing-plans,
   #tymb-featured, #tymb-process, #circuits { padding: 80px 28px; }
+  .doc-section { padding: 80px 28px; }
+  .doc-grid { grid-template-columns: 1fr; gap: 32px; }
   .drawing-embed iframe { height: 480px; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
   .project-card.wide { grid-column: span 2; }
