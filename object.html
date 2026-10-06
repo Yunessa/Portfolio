@@ -67,6 +67,16 @@
     </div>
   </div>
 
+  <!-- SECTION TABS -->
+  <div class="object-tabs" id="objectTabs">
+    <a href="#basics">Basics</a>
+    <a href="#enclosures">Enclosures</a>
+    <a href="#tymb-featured">TYMB</a>
+    <a href="#tymb-process">TYMB Build</a>
+    <a href="#circuits">Motor Buffet</a>
+    <a href="#mirroros">MirrorOS</a>
+  </div>
+
   <!-- BASICS -->
   <section id="basics" class="doc-section">
     <p class="section-label reveal">Where It Started</p>
@@ -587,6 +597,20 @@
     document.getElementById('lightboxClose').addEventListener('click',closeLightbox);
     lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+
+    // ── Section tabs ──
+    const tabLinks=document.querySelectorAll('#objectTabs a');
+    const tabObs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          tabLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
+          history.replaceState(null,'','#'+e.target.id);
+          const act=document.querySelector('#objectTabs a.active');
+          if(act){const bar=document.getElementById('objectTabs');bar.scrollTo({left:act.offsetLeft-bar.clientWidth/2+act.clientWidth/2,behavior:'smooth'});}
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    tabLinks.forEach(a=>{const sec=document.querySelector(a.getAttribute('href'));if(sec)tabObs.observe(sec);});
   </script>
 </body>
 </html>
