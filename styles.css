@@ -722,3 +722,30 @@ footer {
   .nav-links { gap: 16px; }
   .hero-sub { flex-direction: column; gap: 24px; }
 }
+
+/* ══════════════════════════════
+   OBJECT PAGE — SECTION TABS
+══════════════════════════════ */
+section[id] { scroll-margin-top: 110px; }
+.object-tabs {
+  position: sticky; top: 52px; z-index: 150;
+  display: flex; gap: 10px; overflow-x: auto;
+  padding: 14px 56px;
+  background: rgba(13,13,13,0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(186,221,30,0.1);
+  scrollbar-width: none;
+}
+.object-tabs::-webkit-scrollbar { display: none; }
+.object-tabs a {
+  flex: none; padding: 8px 18px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.65); text-decoration: none;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.object-tabs a:hover,
+.object-tabs a.active { background: var(--acid); border-color: var(--acid); color: var(--black); }
+@media (max-width: 900px) {
+  .object-tabs { padding: 12px 28px; top: 48px; }
+}
